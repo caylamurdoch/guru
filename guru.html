@@ -3,6 +3,8 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="guru.js"></script>
     <meta charset="utf-8">
     <title>Guru</title>
@@ -10,16 +12,26 @@
 
 <body>
     <div ng-app='guru' ng-controller='guruCtrl'>
-        <h1>Talk to guru</h1>
-        <form name='userMessage' ng-submit='sendMessage(message)'>
-            <input placeholder='Message' ng-model='message.text' />
-            <button type='submit'>Send</button>
-        </form>
-        <ul class='message-thread'>
-            <li ng-repeat='message in messages'>
-                {{ message.text }}
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <guru/>
+                    <img src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
+                </div>
+                <div class="col-sm-3">
+                    <h1>Talk to guru</h1>
+                    <form name='userMessage' ng-submit='sendMessage(message)'>
+                        <input placeholder='Message' ng-model='message.text' />
+                        <button type='submit'>Send</button>
+                    </form>
+                    <ul class='message-thread'>
+                        <li ng-repeat='message in messages'>
+                            {{ message.text }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

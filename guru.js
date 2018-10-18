@@ -8,6 +8,6 @@ function guruCtrl($scope) {
         $scope.messages.push({
             text: message.text
         });
-        message.text = ''
+        message.text = '';
     };
 }
