@@ -12,36 +12,36 @@
 
 <style>
     .body-color {
-        background-color: #E42553;
+        background: linear-gradient(to right,
+        #E42553 0%,
+        #E42553 66.66%,
+        #ff9bb2 66.66%,
+        #ff9bb2 100%);
     }
 
-    .background-white {
-        background-color: #ffffff;
-        /*height: 100 % ;*/
+    .guru-gif {
+        width: 100%;
     }
 </style>
 
 
 <body class='body-color'>
     <div ng-app='guru' ng-controller='guruCtrl'>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-                    <guru/>
-                    <img src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
-                </div>
-                <div class="col-sm-3 background-white">
-                    <h1>Talk to guru</h1>
-                    <form name='userMessage' ng-submit='sendMessage(message)'>
-                        <input placeholder='Message' ng-model='message.text' />
-                        <button type='submit'>Send</button>
-                    </form>
-                    <ul class='message-thread'>
-                        <li ng-repeat='message in messages'>
-                            {{ message.text }}
-                        </li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <img class="guru-gif" src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
+            </div>
+            <div class="col-sm-4">
+                <h1>Talk to guru</h1>
+                <form name='userMessage' ng-submit='sendMessage(message)'>
+                    <input placeholder='Message' ng-model='message.text' />
+                    <button type='submit'>Send</button>
+                </form>
+                <ul class='message-thread'>
+                    <li ng-repeat='message in messages'>
+                        {{message.text}}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
