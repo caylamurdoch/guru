@@ -10,7 +10,19 @@
     <title>Guru</title>
 </head>
 
-<body>
+<style>
+    .body-color {
+        background-color: #E42553;
+    }
+
+    .background-white {
+        background-color: #ffffff;
+        /*height: 100 % ;*/
+    }
+</style>
+
+
+<body class='body-color'>
     <div ng-app='guru' ng-controller='guruCtrl'>
         <div class="container">
             <div class="row">
@@ -18,7 +30,7 @@
                     <guru/>
                     <img src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 background-white">
                     <h1>Talk to guru</h1>
                     <form name='userMessage' ng-submit='sendMessage(message)'>
                         <input placeholder='Message' ng-model='message.text' />
