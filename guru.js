@@ -27,6 +27,9 @@ console.log(comments_json["allData"][0])
 
 function getRandomReply() {
 
+    let index = Math.floor(Math.random() * (comments_json["allData"].length - 1));
+    console.log(index)
+    return comments_json["allData"][index]
 }
 
 function guruCtrl($scope) {
@@ -36,6 +39,11 @@ function guruCtrl($scope) {
         $scope.messages.push({
             text: message.text
         });
+
+        $scope.messages.push({
+            text: getRandomReply()
+        });
+
         message.text = '';
     };
 
