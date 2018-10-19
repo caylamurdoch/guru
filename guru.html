@@ -15,6 +15,12 @@
 </head>
 
 <style>
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
     .body-color {
         background: linear-gradient(to right,
         #E42553 0%,
@@ -25,6 +31,23 @@
 
     .guru-gif {
         width: 100%;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: #ffffff;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        width: 60%;
+    }
+
+    .left-justify {
+        float: left
+    }
+
+    .right-justify {
+        float: right
     }
 </style>
 
@@ -41,9 +64,13 @@
                     <input placeholder='Message' ng-model='message.text' />
                     <button type='submit'>Send</button>
                 </form>
-                <ul class='message-thread'>
-                    <li ng-repeat='message in messages'>
-                        {{message.text}}
+                <!--<ul ng-repeat="message in messages | orderBy:'-number'">-->
+                <ul ng-repeat="message in messages">
+                    <li>
+                        <conversation content="message.text" class="right-justify" />
+                    </li>
+                    <li>
+                        <conversation content="message.response" class="left-justify" />
                     </li>
                 </ul>
             </div>
