@@ -23,9 +23,9 @@
             <div class="col-sm-4 text-center">
                 <h2>Ask the Guru a Question</h2>
                 <form name='userMessage' ng-submit='sendMessage(message)'>
-                    <input placeholder='Message' ng-model='message.text' />
-                    <button type='submit'>Send</button>
-                </form>
+                    <input placeholder='Message' ng-model='message.text' class="btn-input" />
+                    <button type='submit' class="btn">Send</button>
+                </form><br>
                 <ul ng-repeat="message in messages | orderBy:'-number'">
                     <li>
                         <conversation content="message.response" class="left-justify" />

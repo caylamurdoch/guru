@@ -16,6 +16,10 @@ ul {
     width: 100%;
 }
 
+.col-sm-4 {
+    padding-right: 30px;
+}
+
 .speech-bubble {
     position: relative;
     background: #ffffff;
@@ -38,4 +42,11 @@ ul {
 .quote {
     text-align: center;
     color: white;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
 }

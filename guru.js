@@ -28,7 +28,6 @@ var active_window = 0
 function fade_out($scope, $timeout, wait) {
     let old_window = active_window
 
-
     if (wait <= 0) {
         $scope.quote = ''
         return
