@@ -2,8 +2,6 @@ angular.module('guru', [])
     .controller('guruCtrl', guruCtrl)
     .directive('conversation', conversationDirective);
 
-
-
 var stashedComments = (function() {
     var json = null;
     $.ajax({
@@ -18,18 +16,14 @@ var stashedComments = (function() {
     return json;
 })();
 
-
 var comments_json = stashedComments;
 var index = 0;
-
 
 var running_list = []
 var fade_time = 100
 var increment = 5
 var long_pause = 3000
-
 var active_window = 0
-
 
 function fade_out($scope, $timeout, wait) {
     let old_window = active_window
@@ -54,8 +48,6 @@ function fade_out($scope, $timeout, wait) {
     }, wait);
 }
 
-
-
 function fade_in($scope, $timeout, wait, active_window) {
     let old_window = active_window
 
@@ -68,6 +60,7 @@ function fade_in($scope, $timeout, wait, active_window) {
         }, long_pause);
         return
     }
+
     $timeout(function() {
         if (active_window != old_window) {
             return
@@ -92,16 +85,12 @@ function fade($scope, $timeout, text) {
     }
 
     fade_in($scope, $timeout, 0, active_window)
-
 }
-
-
 
 function guruCtrl($scope, $timeout) {
     $scope.messages = [];
 
-    fade($scope, $timeout, "Hello!")
-
+    fade($scope, $timeout, "Ask me anything!")
 
     $scope.sendMessage = function(message) {
 
