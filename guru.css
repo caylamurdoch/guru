@@ -29,6 +29,10 @@ ul {
     width: 60%;
 }
 
+.speech-bubble-color {
+    background-color: #f2f2f2;
+}
+
 .left-justify {
     float: left;
     text-align: left;
