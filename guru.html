@@ -10,49 +10,10 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="guru.js"></script>
+    <link rel="stylesheet" type="text/css" href="guru.css">
     <meta charset="utf-8">
-    <title>Guru</title>
+    <title>Ask The Guru</title>
 </head>
-
-<style>
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .body-color {
-        background: linear-gradient(to right,
-        #E42553 0%,
-        #E42553 66.66%,
-        #ff9bb2 66.66%,
-        #ff9bb2 100%);
-    }
-
-    .guru-gif {
-        width: 100%;
-    }
-
-    .speech-bubble {
-        position: relative;
-        background: #ffffff;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 10px;
-        width: 60%;
-    }
-
-    .left-justify {
-        float: left;
-        text-align: left;
-    }
-
-    .right-justify {
-        float: right;
-        text-align: left;
-    }
-</style>
-
 
 <body class='body-color'>
     <div ng-app='guru' ng-controller='guruCtrl'>
@@ -61,7 +22,7 @@
                 <img class="guru-gif" src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
             </div>
             <div class="col-sm-4 text-center">
-                <h1>Talk to the Guru</h1>
+                <h2>Ask the Guru a Question</h2>
                 <form name='userMessage' ng-submit='sendMessage(message)'>
                     <input placeholder='Message' ng-model='message.text' />
                     <button type='submit'>Send</button>
