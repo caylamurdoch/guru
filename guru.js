@@ -18,11 +18,28 @@ var stashedComments = (function() {
     return json;
 })();
 
+//I need a function that takes a json of catagories and fills it with the right json stuff. 
+
+function buildDictionary(input_json) {
+
+}
+
 var comments_json = stashedComments;
 var index = 0;
+var quote_dictionary_by_catagory = buildDictionary(comments_json)
+
+console.log(quote_dictionary_by_catagory)
+
+
+
+
+
+
 
 function guruCtrl($scope) {
     $scope.messages = [];
+
+    $scope.quote = "hi"
 
     $scope.sendMessage = function(message) {
         $scope.messages.push({

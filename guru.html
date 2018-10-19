@@ -51,6 +51,10 @@
         float: right;
         text-align: left;
     }
+
+    .quote {
+        text-align: center;
+    }
 </style>
 
 
@@ -58,7 +62,10 @@
     <div ng-app='guru' ng-controller='guruCtrl'>
         <div class="row">
             <div class="col-sm-8">
+
+                <!--<img class="guru-gif" src="https://static1.squarespace.com/static/594b737559cc68c3d2290e12/t/5a13dd89e2c483971e9d921f/1511251755924/Chuck_2b.gif?format=1000w">-->
                 <img class="guru-gif" src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
+                <h2 class='quote'> {{quote}} </h2>
             </div>
             <div class="col-sm-4 text-center">
                 <h1>Talk to the Guru</h1>
