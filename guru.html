@@ -43,11 +43,13 @@
     }
 
     .left-justify {
-        float: left
+        float: left;
+        text-align: left;
     }
 
     .right-justify {
-        float: right
+        float: right;
+        text-align: left;
     }
 </style>
 
@@ -58,19 +60,18 @@
             <div class="col-sm-8">
                 <img class="guru-gif" src="https://cdn.dribbble.com/users/514480/screenshots/3963528/ravi_9b.gif">
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 text-center">
                 <h1>Talk to the Guru</h1>
                 <form name='userMessage' ng-submit='sendMessage(message)'>
                     <input placeholder='Message' ng-model='message.text' />
                     <button type='submit'>Send</button>
                 </form>
-                <!--<ul ng-repeat="message in messages | orderBy:'-number'">-->
-                <ul ng-repeat="message in messages">
-                    <li>
-                        <conversation content="message.text" class="right-justify" />
+                <ul ng-repeat="message in messages | orderBy:'-number'">
+                    <li class="fade">
+                        <conversation content="message.response" class="left-justify" />
                     </li>
                     <li>
-                        <conversation content="message.response" class="left-justify" />
+                        <conversation content="message.text" class="right-justify" />
                     </li>
                 </ul>
             </div>
