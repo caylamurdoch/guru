@@ -7,7 +7,8 @@ var stashedComments = (function() {
     $.ajax({
         'async': false,
         'global': false,
-        'url': "data.2.json",
+        'url': "insperation.json",
+        // 'url': "data.2.json",
         'dataType': "json",
         'success': function(data) {
             json = data;
